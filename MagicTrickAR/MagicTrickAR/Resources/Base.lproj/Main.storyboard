@@ -1,23 +1,68 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A278a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Magic Scene View Controller-->
         <scene sceneID="tXr-a1-R10">
             <objects>
-                <viewController id="BV1-FR-VrT" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <arscnView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="BrB-h1-WRS">
+                <viewController id="BV1-FR-VrT" customClass="MagicSceneViewController" customModule="MagicTrickAR" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uIg-20-nPv">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    </arscnView>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RQn-C8-h9L">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </arscnView>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oC8-uL-Xi2">
+                                <rect key="frame" x="20" y="597" width="157.5" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="pi9-7j-fTh"/>
+                                </constraints>
+                                <state key="normal" title="Magic"/>
+                                <connections>
+                                    <action selector="pressMagicButton:" destination="BV1-FR-VrT" eventType="touchUpInside" id="B3v-tc-cxG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="640-PQ-grs">
+                                <rect key="frame" x="197.5" y="597" width="157.5" height="50"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="tmj-TA-bUK"/>
+                                </constraints>
+                                <state key="normal" title="Throw ball"/>
+                                <connections>
+                                    <action selector="pressThrowButton:" destination="BV1-FR-VrT" eventType="touchUpInside" id="KcN-d2-Yzj"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="RQn-C8-h9L" firstAttribute="trailing" secondItem="nUp-fF-0gD" secondAttribute="trailing" id="0fd-Nb-MKK"/>
+                            <constraint firstItem="nUp-fF-0gD" firstAttribute="trailing" secondItem="640-PQ-grs" secondAttribute="trailing" constant="20" id="2vZ-GA-nal"/>
+                            <constraint firstItem="RQn-C8-h9L" firstAttribute="bottom" secondItem="nUp-fF-0gD" secondAttribute="bottom" id="FHn-WJ-4k8"/>
+                            <constraint firstItem="640-PQ-grs" firstAttribute="width" secondItem="oC8-uL-Xi2" secondAttribute="width" id="UPd-yL-REJ"/>
+                            <constraint firstItem="RQn-C8-h9L" firstAttribute="top" secondItem="uIg-20-nPv" secondAttribute="top" id="ZTs-3B-meJ"/>
+                            <constraint firstItem="nUp-fF-0gD" firstAttribute="bottom" secondItem="640-PQ-grs" secondAttribute="bottom" constant="20" id="bW0-Ly-8nm"/>
+                            <constraint firstItem="640-PQ-grs" firstAttribute="leading" secondItem="oC8-uL-Xi2" secondAttribute="trailing" constant="20" id="j0S-ia-9kr"/>
+                            <constraint firstItem="RQn-C8-h9L" firstAttribute="leading" secondItem="nUp-fF-0gD" secondAttribute="leading" id="qZ5-Zz-myu"/>
+                            <constraint firstItem="oC8-uL-Xi2" firstAttribute="leading" secondItem="nUp-fF-0gD" secondAttribute="leading" constant="20" id="wci-z4-Se8"/>
+                            <constraint firstItem="nUp-fF-0gD" firstAttribute="bottom" secondItem="oC8-uL-Xi2" secondAttribute="bottom" constant="20" id="wk2-Zf-RZ5"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="nUp-fF-0gD"/>
+                    </view>
                     <connections>
-                        <outlet property="sceneView" destination="BrB-h1-WRS" id="5nT-qQ-ynl"/>
+                        <outlet property="magicButton" destination="oC8-uL-Xi2" id="Ate-wA-tsH"/>
+                        <outlet property="sceneView" destination="RQn-C8-h9L" id="ird-tY-ino"/>
+                        <outlet property="throwButton" destination="640-PQ-grs" id="hL7-MQ-S2C"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
