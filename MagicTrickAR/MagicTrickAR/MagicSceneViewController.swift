@@ -137,7 +137,7 @@ extension MagicSceneViewController: ARSCNViewDelegate {
 												 height: CGFloat(planeAnchor.extent.z) * planePadding)
 		
 		let planeMaterial = SCNMaterial()
-		planeMaterial.diffuse.contents = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 0.1)
+		planeMaterial.diffuse.contents = UIColor.clear
 		plane.materials = [planeMaterial]
 		
 		let planeNode = SCNNode(geometry: plane)
