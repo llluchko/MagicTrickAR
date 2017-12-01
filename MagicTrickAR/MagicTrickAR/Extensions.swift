@@ -8,36 +8,20 @@
 
 import ARKit
 
-extension SCNNode {
-	func boundingBoxContains(point: SCNVector3, in node: SCNNode) -> Bool {
-		let localPoint = self.convertPosition(point, from: node)
-		return boundingBoxContains(point: localPoint)
+extension SCNVector3 {
+	static func + (left: SCNVector3, right : SCNVector3) -> SCNVector3 {
+		return SCNVector3(left.x + right.x, left.y + right.y, left.z + right.z)
 	}
 	
-	func boundingBoxContains(point: SCNVector3) -> Bool {
-		return BoundingBox(self.boundingBox).contains(point)
-	}
-}
-
-struct BoundingBox {
-	let min: SCNVector3
-	let max: SCNVector3
-	
-	init(_ boundTuple: (min: SCNVector3, max: SCNVector3)) {
-		min = boundTuple.min
-		max = boundTuple.max
+	static func - (left: SCNVector3, right : SCNVector3) -> SCNVector3 {
+		return SCNVector3(left.x - right.x, left.y - right.y, left.z - right.z)
 	}
 	
-	func contains(_ point: SCNVector3) -> Bool {
-		let contains =
-			min.x <= point.x &&
-				min.y <= point.y &&
-				min.z <= point.z &&
-				
-				max.x > point.x &&
-				max.y > point.y &&
-				max.z > point.z
-		
-		return contains
+	static func / (left: SCNVector3, right : Float) -> SCNVector3 {
+		return SCNVector3(left.x / right, left.y / right, left.z / right)
+	}
+	
+	static func * (left: SCNVector3, right : Float) -> SCNVector3 {
+		return SCNVector3(left.x * right, left.y * right, left.z * right)
 	}
 }

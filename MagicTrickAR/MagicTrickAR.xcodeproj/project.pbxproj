@@ -9,17 +9,20 @@
 /* Begin PBXBuildFile section */
 		694D69F11FCB584A008A033F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694D69F01FCB584A008A033F /* Extensions.swift */; };
 		694D69F31FCB5893008A033F /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = 694D69F21FCB5893008A033F /* Util.swift */; };
+		6950CF861FCD4A91001C59ED /* Hat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6950CF851FCD4A91001C59ED /* Hat.swift */; };
 		69D07C5A1FCB3483004F7142 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D07C591FCB3483004F7142 /* AppDelegate.swift */; };
 		69D07C5C1FCB3483004F7142 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 69D07C5B1FCB3483004F7142 /* art.scnassets */; };
 		69D07C5E1FCB3483004F7142 /* MagicSceneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69D07C5D1FCB3483004F7142 /* MagicSceneViewController.swift */; };
 		69D07C611FCB3483004F7142 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69D07C5F1FCB3483004F7142 /* Main.storyboard */; };
 		69D07C631FCB3483004F7142 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 69D07C621FCB3483004F7142 /* Assets.xcassets */; };
 		69D07C661FCB3483004F7142 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 69D07C641FCB3483004F7142 /* LaunchScreen.storyboard */; };
+		69ED1D391FD14D9F008D3000 /* Ball.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69ED1D381FD14D9F008D3000 /* Ball.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		694D69F01FCB584A008A033F /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		694D69F21FCB5893008A033F /* Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		6950CF851FCD4A91001C59ED /* Hat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Hat.swift; sourceTree = "<group>"; };
 		69D07C561FCB3483004F7142 /* MagicTrickAR.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MagicTrickAR.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		69D07C591FCB3483004F7142 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		69D07C5B1FCB3483004F7142 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -28,6 +31,7 @@
 		69D07C621FCB3483004F7142 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		69D07C651FCB3483004F7142 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		69D07C671FCB3483004F7142 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		69ED1D381FD14D9F008D3000 /* Ball.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ball.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,9 +78,11 @@
 			isa = PBXGroup;
 			children = (
 				69D07C591FCB3483004F7142 /* AppDelegate.swift */,
-				69D07C5D1FCB3483004F7142 /* MagicSceneViewController.swift */,
-				694D69F01FCB584A008A033F /* Extensions.swift */,
 				694D69F21FCB5893008A033F /* Util.swift */,
+				694D69F01FCB584A008A033F /* Extensions.swift */,
+				6950CF851FCD4A91001C59ED /* Hat.swift */,
+				69ED1D381FD14D9F008D3000 /* Ball.swift */,
+				69D07C5D1FCB3483004F7142 /* MagicSceneViewController.swift */,
 				694D69EF1FCB5820008A033F /* Resources */,
 			);
 			path = MagicTrickAR;
@@ -155,7 +161,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				69ED1D391FD14D9F008D3000 /* Ball.swift in Sources */,
 				694D69F11FCB584A008A033F /* Extensions.swift in Sources */,
+				6950CF861FCD4A91001C59ED /* Hat.swift in Sources */,
 				694D69F31FCB5893008A033F /* Util.swift in Sources */,
 				69D07C5E1FCB3483004F7142 /* MagicSceneViewController.swift in Sources */,
 				69D07C5A1FCB3483004F7142 /* AppDelegate.swift in Sources */,
@@ -297,7 +305,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4GL97XPJPX;
-				INFOPLIST_FILE = MagicTrickAR/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MagicTrickAR/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.latchezar.MagicTrickAR;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -312,7 +320,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4GL97XPJPX;
-				INFOPLIST_FILE = MagicTrickAR/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MagicTrickAR/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.latchezar.MagicTrickAR;
 				PRODUCT_NAME = "$(TARGET_NAME)";
